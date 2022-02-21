@@ -15,3 +15,7 @@
 |                       Options                 |    Padding    |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ~~~
+- Usando o programa `mtr` para descobrir a rota até um determinado destino. A opção `-n` serve para não resolver nomes.
+~~~
+:~$ mtr -n yahoo.co.jp
+~~~
