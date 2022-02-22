@@ -112,3 +112,19 @@ Importante: as flags TCP são disparadas contra portas e somente a flag push pos
 - Somente os protocolos TCP e UDP possuem portas.
 - Sempre que houver uma nova conexão TCP ou UDP, a porta do cliente mudará.
 - O protocolo UDP é mais rápido mas exige que todo o controle de fluxo seja feito pela aplicação, ao contrário do TCP.
+
+## Protocolo ICMP
+- ICMP, RFC 792. O protocolo de controle do IP.
+~~~
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|     Type      |     Code      |          Checksum             |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                              ICMP                             |
+~~~
+**Exemplos:**
+- Tipo 8: echo request.
+- Tipo 0: echo reply.
+- Tipo 3, código 3: porta de destino inacessível.
+- Tipo 11, código 0: TTL expirado em trânsito.
