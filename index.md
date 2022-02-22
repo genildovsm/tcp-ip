@@ -154,3 +154,6 @@ Bits           Física           Hub, cabos, placa de rede, ondas wireless etc
 |                              ETHERNET TYPE II FRAME (64 to 1518 bytes)                                |
 |-------------------------------------------------------------------------------------------------------|
 ~~~
+**MTU :** Máxima quantidade de dados que o payload da camada 2 consegue transmitir.  
+
+
