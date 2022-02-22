@@ -128,3 +128,10 @@ Importante: as flags TCP são disparadas contra portas e somente a flag push pos
 - Tipo 0: echo reply.
 - Tipo 3, código 3: porta de destino inacessível.
 - Tipo 11, código 0: TTL expirado em trânsito.
+
+## O Modelo OSI
+-Modelo criado pela ISO para que fabricantes de hardware de rede possam desenvolver equipamentos compatíveis entre si.
+~~~
+Dados      Aplicação      Usuario, http, ftp, smtp, pop3, chat etc
+Dados      Atesentação    SSL, conversão de padrões, (des)compressão
+~~~
