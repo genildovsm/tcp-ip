@@ -130,8 +130,15 @@ Importante: as flags TCP são disparadas contra portas e somente a flag push pos
 - Tipo 11, código 0: TTL expirado em trânsito.
 
 ## O Modelo OSI
--Modelo criado pela ISO para que fabricantes de hardware de rede possam desenvolver equipamentos compatíveis entre si.
+- Modelo criado pela ISO para que fabricantes de hardware de rede possam desenvolver equipamentos compatíveis entre si.
 ~~~
-Dados      Aplicação      Usuario, http, ftp, smtp, pop3, chat etc
-Dados      Atesentação    SSL, conversão de padrões, (des)compressão
+Dados          Aplicação        Usuario, http, ftp, smtp, pop3, chat etc
+Dados          Apresentação     SSL, conversão de padrões, (des)compressão
+Dados          Sessão           Sessão de aplicações
+Segmentos      Transporte       TCP, UDP
+Pacotes[1]     Rede             IP e protocolos IP (exceto TCP e UDP) / roteador
+Quadros[2]     Enlace           Ethernet, ATM, PPP, frame relay / switch, bridge
+Bits           Física           Hub, cabos, placa de rede, ondas wireless etc
 ~~~
+[1] pacotes ou datagramas  
+[2] quadros ou frames  
