@@ -109,3 +109,6 @@ Importante: as flags TCP são disparadas contra portas e somente a flag push pos
 |     Length      |    Checksum     |
 +--------+--------+--------+--------+
 ~~~
+- Somente os protocolos TCP e UDP possuem portas.
+- Sempre que houver uma nova conexão TCP ou UDP, a porta do cliente mudará.
+- O protocolo UDP é mais rápido mas exige que todo o controle de fluxo seja feito pela aplicação, ao contrário do TCP.
