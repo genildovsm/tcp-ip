@@ -89,3 +89,11 @@ shim6   140     Shim6           # Shim6 Protocol [RFC5533]
 wesp    141     WESP            # Wrapped Encapsulating Security Payload
 rohc    142     ROHC            # Robust Header Compression
 ~~~
+ ## Flags TCP
+ - Syn (synchronize): inicia conexões.
+ - Fin (finish): finaliza conexões.
+ - Psh (push): envia dados.
+ - Ack (acknowledgment): confirmação de que é conhecido o número de sequência do próximo segmento a ser enviado pelo lado oposto.
+ - Rst (reset): "não entendi".
+   
+ Importante: as flags TCP são disparadas contra portas e somente a flag push possui payload.
