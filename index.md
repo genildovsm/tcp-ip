@@ -146,8 +146,8 @@ Bits           Física           Hub, cabos, placa de rede, ondas wireless etc
 ## Protocolo Ethernet
 ~~~
 |-------------------------------------------------------------------------------------------------------| 
-| 80 00 20 7A 3F 3E       | 80 00 20 20 3A AE       | IP, ARP, etc.           | 00 20 20 3A             |
-| Destination MAC Address | Source MAC Address      | Payload                 | CRC Checksum            |
+|     80 00 20 7A 3F 3E   |   80 00 20 20 3A AE     |        P, ARP, etc.     |      00 20 20 3A        |
+| Destination MAC Address |   Source MAC Address    |          Payload        |      CRC Checksum       |
 |-------------------------------------------------------------------------------------------------------|
 |               MAC Header (14 bytes)               |  Data (46 - 1400 bytes) |        (4 bytes)        |
 |-------------------------------------------------------------------------------------------------------|
