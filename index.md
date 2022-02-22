@@ -96,4 +96,16 @@ rohc    142     ROHC            # Robust Header Compression
  - Ack (acknowledgment): confirmação de que é conhecido o número de sequência do próximo segmento a ser enviado pelo lado oposto.
  - Rst (reset): "não entendi".
    
- Importante: as flags TCP são disparadas contra portas e somente a flag push possui payload.
+Importante: as flags TCP são disparadas contra portas e somente a flag push possui payload.
+ 
+## Protocolo UDP
+- UDP, RFC 768. O protocolo de transporte masi rápido da família TCP/IP
+~~~
+ 0      7 8     15 16    23 24    31 
++--------+--------+--------+--------+
+|     Source      |   Destination   |
+|      Port       |      Port       |
++--------+--------+--------+--------+
+|     Length      |    Checksum     |
++--------+--------+--------+--------+
+~~~
