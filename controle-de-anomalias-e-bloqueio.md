@@ -21,8 +21,7 @@ Autor: Eriberto Mota
 - Filesystems são estabelecidos por formatação de disco.
 - O inotify é parte integrante do kernel linux e o seu trabalho é obrigatório para que o SO funcione.
 - Em resumo, o **inotify monitora mudanças nos arquivos e diretórios**. Então, poderemos acompanhar atividades em logs.
-
-### Conceitos básicos e ferramentas
+  
 - **rsyslog:** servidor de logs padrão no Debian e outros.
 - **logger:** envia logs personalizados para rsyslogs locais ou remotos.
 - **iptables:** ferramenta do Netfilter que gera logs de rede e faz bloqueios.
