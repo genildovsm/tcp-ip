@@ -1,6 +1,6 @@
 # Controle de anomalias e bloqueio
 
-Fonte: [Análise de tráfego de redes TCP/IP](https://youtu.be/8KyrUA1nACY?t=3254)
+Fonte: [Análise de tráfego de redes TCP/IP](https://youtu.be/8KyrUA1nACY?t=3430)
 Autor: Eriberto Mota
 
 ### Visão geral do processo
@@ -57,3 +57,14 @@ module(load="imudp")
 input(type="imudp" port="512")
 ~~~
 - É uma boa prática utilizar o iptables para dizer quem poderá acessar a porta 514 UDP do servidor.
+  
+### Gerar log local com o logger (pode ser via usuário comum do sistema);
+~~~
+:~$ logger "Teste de Log"
+:~# tail -n1 /var/log/syslog
+~~~
+### Gerar log com ID do processo e TAG:
+~~~
+:~$ logger -i -t TESTE "Teste de log"
+:~# tail -n1 /var/log/syslog
+~~~
