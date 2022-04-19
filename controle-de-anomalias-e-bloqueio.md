@@ -17,12 +17,12 @@ Autor: Eriberto Mota
 - O rsyslog é amplamente configurável e permite a coleta de dados locais e remotos para gerar os logs.
 - É possível criar regras, inclusive com expressões regulares, para tratar os logs gerados pelo rsyslog.
 - **inotify:** monitor de eventos de filesystem, baseado em informações de inodes.
-- Os inodes controlan os arquivos e diretórios existentes em um filesystem.
+- Os inodes controlam os arquivos e diretórios existentes em um filesystem.
 - Filesystems são estabelecidos por formatação de disco.
 - O inotify é parte integrante do kernel linux e o seu trabalho é obrigatório para que o SO funcione.
 - Em resumo, o **inotify monitora mudanças nos arquivos e diretórios**. Então, poderemos acompanhar atividades em logs.
 
-| Software | Descrição |  
+| **Software** | **Descrição** |  
 |--- |---| 
 | **rsyslog:** | servidor de logs padrão no Debian e outros. |
 | **logger:** | envia logs personalizados para rsyslogs locais ou remotos. |
@@ -31,3 +31,13 @@ Autor: Eriberto Mota
 | **suricata:** | faz o mesmo trabalho do snort. |
 | **portsentry:** | gera logs sobre port scans e os bloqueia. |
 | **curl:** | acessa servidores web, gerando logs, podendo estes serem personalizados. |
+
+### Ferramentas baseadas em inotify
+- fail2ban: analisa logs em tempo real e faz bloqueios por tempos pré determinados.
+- iwatch: reage, em tempo real, a alterações em filesystems. Pode ser utilizado para verificar logs.
+
+### Ferramentas para comunicação em linha de comando
+- sendxmpp: envia mensagens XMPP (Jabber).
+- sendmail: envia mensagens de email.
+- yowsup-cli: envia mensagens WhatsApp.
+- tg (by vysheng): envia mensagens Telegram.
