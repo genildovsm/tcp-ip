@@ -1,6 +1,6 @@
 # Controle de anomalias e bloqueio
 
-Fonte: [Análise de tráfego de redes TCP/IP](https://youtu.be/8KyrUA1nACY?t=1888)
+Fonte: [Análise de tráfego de redes TCP/IP](https://youtu.be/8KyrUA1nACY?t=3254)
 Autor: Eriberto Mota
 
 ### Visão geral do processo
@@ -41,3 +41,19 @@ Autor: Eriberto Mota
 - sendmail: envia mensagens de email.
 - yowsup-cli: envia mensagens WhatsApp.
 - tg (by vysheng): envia mensagens Telegram.
+
+### Ferramentas e sistemas XMPP (Jabber)
+- prosody: servidor XMPP com diversos recursos, permitindo criptografia e salas de conferência.
+- pidgin: cliente para desktops. Extremamente versátil. Disponível para Linux, Windows e Mac.
+- Yaxim: cliente leve para android. Mantém-se, por default, em segundo plano, da mesma forma como faz o WhatsApp. Permite criptografia.
+- Frreelab: cliente para android, com segundo palno e criptografia configuráveis (não é o default).
+
+# Geração de logs
+- O rsyslog pode ser configurado para receber logs remotos. A porta default é a 514 UDP.
+- Para isso, no Debian, basta descomentar as seguintes linhas em `/etc/rsyslog.conf`:
+~~~
+# provides UDP syslog reception
+module(load="imudp")
+input(type="imudp" port="512")
+~~~
+- É uma boa prática utilizar o iptables para dizer quem poderá acessar a porta 514 UDP do servidor.
