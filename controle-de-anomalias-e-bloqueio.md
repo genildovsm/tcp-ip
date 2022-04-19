@@ -21,12 +21,13 @@ Autor: Eriberto Mota
 - Filesystems são estabelecidos por formatação de disco.
 - O inotify é parte integrante do kernel linux e o seu trabalho é obrigatório para que o SO funcione.
 - Em resumo, o **inotify monitora mudanças nos arquivos e diretórios**. Então, poderemos acompanhar atividades em logs.
-  
-  
-- **rsyslog:** servidor de logs padrão no Debian e outros.
-- **logger:** envia logs personalizados para rsyslogs locais ou remotos.
-- **iptables:** ferramenta do Netfilter que gera logs de rede e faz bloqueios.
-- **snort:** pode analisar payloads de rede e ferar logs.
-- **suricata:** faz o mesmo trabalho do snort.
-- **portsentry:** gera logs sobre port scans e os bloqueia.
-- **curl:** acessa servidores web, gerando logs, podendo estes serem personalizados.
+
+| Software | Descrição |  
+|--- |---| 
+| **rsyslog:** | servidor de logs padrão no Debian e outros. |
+| **logger:** | envia logs personalizados para rsyslogs locais ou remotos. |
+| **iptables:** | ferramenta do Netfilter que gera logs de rede e faz bloqueios. |
+| **snort:** | pode analisar payloads de rede e ferar logs. |
+| **suricata:** | faz o mesmo trabalho do snort. |
+| **portsentry:** | gera logs sobre port scans e os bloqueia. |
+| **curl:** | acessa servidores web, gerando logs, podendo estes serem personalizados. |
