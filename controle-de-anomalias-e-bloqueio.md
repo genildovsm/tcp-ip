@@ -54,7 +54,7 @@ Autor: Eriberto Mota
 ~~~
 # provides UDP syslog reception
 module(load="imudp")
-input(type="imudp" port="512")
+input(type="imudp" port="514")
 ~~~
 - É uma boa prática utilizar o iptables para dizer quem poderá acessar a porta 514 UDP do servidor.
   
