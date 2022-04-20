@@ -142,7 +142,7 @@ Na máquina que deseja enviar uma cópia dos logs para o servidor, editar o arqu
 - **iWatch** e **fail2ban** são duas boas possibilidades baseadas em inotify.
 - O **fail2ban** tem a vantagem de permitir bloqueios por tempos pré determinados.
 - Para utilizar o **fail2ban** é necessário configurar os seguintes arquivos, em `/etc/fail2ban/`:
-   - action.d/<nome>.conf : Ação a ser executada.
-   - filter.d/<nome>.conf : Filtro para ocorrências de log.
-   - jail.d/<nome>.conf : Determina as condições para realizar a filtragem e desencadear a ação.
+   - action.d/nome.conf : Ação a ser executada.
+   - filter.d/nome.conf : Filtro para ocorrências de log.
+   - jail.d/nome.conf : Determina as condições para realizar a filtragem e desencadear a ação.
 
