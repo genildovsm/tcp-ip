@@ -1,6 +1,6 @@
 # Controle de anomalias e bloqueio
 
-Fonte: [Análise de tráfego de redes TCP/IP](https://youtu.be/8KyrUA1nACY?t=3430)
+Fonte: [Análise de tráfego de redes TCP/IP](https://youtu.be/8KyrUA1nACY?t=5196)
 Autor: Eriberto Mota
 
 ### Visão geral do processo
@@ -146,3 +146,24 @@ Na máquina que deseja enviar uma cópia dos logs para o servidor, editar o arqu
    - filter.d/nome.conf : Filtro para ocorrências de log.
    - jail.d/nome.conf : Determina as condições para realizar a filtragem e desencadear a ação.
 
+### Exemplo: action.d/action-route-xmpp.conf
+
+~~~bash
+[Definition]
+actionban = ip route add <blocktype> <ip>
+            echo `date "+%%d %%b %%Y %%X"` <ip> <name> | \
+			{ sendxmpp -t eriberto@jabber.org fulano@jabber.org; \
+              logger -t fail2ban-block <ip> <name>; }
+			  
+actionunban = ip route del <blocktype> <ip>
+
+actionstart = 
+actionstop = 
+actioncheck = 
+
+[Init]
+blocktype = unreachable
+
+# <ip> corresponde ao IP que está trafegando;
+# <name> é uma variável que será recebida do jail.conf
+~~~
