@@ -62,9 +62,12 @@ input(type="imudp" port="514")
 ~~~
 :~$ logger "Teste de Log"
 :~# tail -n1 /var/log/syslog
+Oct 17 14:40:01 coiote genildo: Teste de log
 ~~~
+
 ### Gerar log com ID do processo e TAG:
 ~~~
 :~$ logger -i -t TESTE "Teste de log"
 :~# tail -n1 /var/log/syslog
+Oct 17 14:41:21 coiote TESTE[32146]: Teste de log
 ~~~
