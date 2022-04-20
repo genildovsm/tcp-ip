@@ -127,7 +127,12 @@ $template Servers, "/var/log/01_SERVERS/%HOSTNAME%/%PROGRAMNAME%.log"
 & stop
 ~~~
 
-> [Referência](http://www.rsyslog.com/doc/v8-stable/configuration/filters.html)
+Referência de filtros : https://www.rsyslog.com/doc/master/configuration/filters.html
 
 ### Direcionar os logs para o servidor remoto de logs
+
+Na máquina que deseja enviar uma cópia dos logs para o servidor, editar o arquivo `/etc/rsyslog.conf`, colocando na última linha do arquivo:
+~~~
+*.* @ nomeDoServidorDeLogs
+~~~
 
