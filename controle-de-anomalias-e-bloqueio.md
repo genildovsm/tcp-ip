@@ -71,3 +71,15 @@ Oct 17 14:40:01 coiote genildo: Teste de log
 :~# tail -n1 /var/log/syslog
 Oct 17 14:41:21 coiote TESTE[32146]: Teste de log
 ~~~
+
+### Gerar log em servidor remoto (-d = UDP)
+~~~
+:~$ logger -n logserver.com.ex -d -P 514 -i -t TESTE "teste de log"
+Oct 17 14:52:11 192.168.0.100 TESTE[32329]: teste de log
+~~~
+
+Se mais de um nome for colocado na TAG, o primeiro será interpretado como sendo o nome do host. Dessa forma é possível registrar o nome da máquina ao invés do endereço IP.
+~~~
+:~$ logger -n logserver.com.ex -d -P 514 -i -t 'coiote TESTE' "teste de log"
+Oct 17 14:54:13 coiote TESTE[32329]: teste de log
+~~~
