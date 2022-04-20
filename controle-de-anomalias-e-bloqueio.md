@@ -127,7 +127,7 @@ $template Servers, "/var/log/01_SERVERS/%HOSTNAME%/%PROGRAMNAME%.log"
 & stop
 ~~~
 
-> [Referência] (http://www.rsyslog.com/doc/v8-stable/configuration/filters.html)
+> [Referência](http://www.rsyslog.com/doc/v8-stable/configuration/filters.html)
 
 ### Direcionar os logs para o servidor remoto de logs
 
