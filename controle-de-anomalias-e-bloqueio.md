@@ -90,3 +90,13 @@ Oct 17 14:54:13 coiote TESTE[32329]: teste de log
 ~~~
 :syslogtag, contains, "ALERTA" /var/log/01_SERVERS/ALERTA.log
 ~~~
+
+### Composição básica da linha de log
+~~~
+Oct 17 14:54:13 coiote TESTE[32329]: teste de log
+
+TIMESTAMP		HOSTNAME	programname		syslogtag	msg
+~~~
+- Dependendo do log haverá outros campos possíveis. Para mais detalhes: `man rsyslog.conf`.
+- Dentro de um arquivo, as regras serão processadas na ordem em que aparecem.
+ 
