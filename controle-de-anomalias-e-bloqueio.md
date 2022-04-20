@@ -95,8 +95,39 @@ Oct 17 14:54:13 coiote TESTE[32329]: teste de log
 ~~~
 Oct 17 14:54:13 coiote TESTE[32329]: teste de log
 
-TIMESTAMP		HOSTNAME	programname		syslogtag	msg
+TIMESTAMP    HOSTNAME    programname    syslogtag    msg
 ~~~
 - Dependendo do log haverá outros campos possíveis. Para mais detalhes: `man rsyslog.conf`.
 - Dentro de um arquivo, as regras serão processadas na ordem em que aparecem.
- 
+
+### Outros exemplos de filtro
+
+Mensagens oriundas de 10.0.0.1 irão para `/var/log/01_SERVERS/01-CISCO.log`.  
+~~~
+:fromhost-ip, contains, "10.0.0.1" /var/log/01_SERVERS/01-CISCO.log
+& stop
+~~~
+
+Endereços privados (RFC1918) saindo para a internet. mensagem contendo `RFC1918` irão para `/var/log/01_SERVERS/ALERTA.log`.
+~~~
+:msg, contains, "RFC1918" /var/log/01_SERVERS/ALERTA.log
+& stop
+~~~
+
+Regra com expressão regular
+~~~
+:msg, regex, "fatal .* error" /var/log/01_SERVERS/ALERTA.log
+& stop
+~~~
+
+Separar logs por nome de servidor usando template
+~~~
+$template Servers, "/var/log/01_SERVERS/%HOSTNAME%/%PROGRAMNAME%.log"
+*.* ?Servers
+& stop
+~~~
+
+> [Referência] (http://www.rsyslog.com/doc/v8-stable/configuration/filters.html)
+
+### Direcionar os logs para o servidor remoto de logs
+
