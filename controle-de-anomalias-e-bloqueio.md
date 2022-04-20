@@ -83,3 +83,10 @@ Se mais de um nome for colocado na TAG, o primeiro será interpretado como sendo
 :~$ logger -n logserver.com.ex -d -P 514 -i -t 'coiote TESTE' "teste de log"
 Oct 17 14:54:13 coiote TESTE[32329]: teste de log
 ~~~
+  
+- O rsyslog permite filtragens, fazendo com que cada tipo de log caia em um arquivo de log diferente do **/var/log/syslog**, que é o default.
+- Os arquivos de configuração de filtros deverão ter a extensão `.conf` e ser colocados em **/etc/rsyslog.d/**. É possível ter todas as regras em um único arquivo.
+- Como exemplo, a linha a seguir enviará todas as mensagens que contém a **TAG ALERTA** para `/var/log/01_SERVERS/ALERTA.log`.
+~~~
+:syslogtag, contains, "ALERTA" /var/log/01_SERVERS/ALERTA.log
+~~~
